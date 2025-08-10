@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.navbar {
+    border-bottom: 4px rgba(255, 195, 83, 0.689) solid;
+    background-color: #ffffffa9;
+    box-shadow: rgba(149, 157, 165, 0.5) 0px 10px 10px;
+}
+
+.nav-logo {
+    width: 40px;
+    margin-right: 15px;
+}
+.nav-item {
+    border-radius: 5px;
+}
+.nav-logo {
+    font-family: 'Brasika Display - Trial', sans-serif;
+    border-radius: 50%;
+}
+
+.navbar-brand {
+    font-family: 'Brasika Display - Trial', sans-serif;
+    font-size: 1.1rem;
+}
+
+.navbar-brand-name {
+    color: rgb(255, 184, 51);
+    font-family: 'Brasika Display - Trial', sans-serif;
+    font-size: 1.1rem;
+}
+
+.nav-link:hover {
+    background-color: rgba(220, 220, 220, 0.381);
+    border-radius: 5px;
+}
+
+.nav-item .nav-link {
+    font-size: 1.1rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+}
+
+.dropdown-menu {
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(255, 184, 51);
+    padding: 0;
+}
+
+.dropdown-menu>li:not(:last-child) {
+    border-bottom: 1px dashed black;
+}
+
+.dropdown-item {
+    padding: 15px;
+}
+
+.dropdown-menu>li>a:hover {
+    background-color: rgb(225, 216, 199);
+}
+
+.dropdown-menu li {
+    position: relative;
+}
+
+.dropdown-menu .dropdown-submenu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0px;
+}
+
+.dropdown-menu .dropdown-submenu-left {
+    right: 110%;
+    left: auto;
+}
+
+.dropdown-menu > li:hover > .dropdown-submenu {
+    display: block;
+}
+
+.nav-link.donate {
+    background-color: orange;
+    border: orange 2px solid;    
+}
+.nav-link.admin{
+    background-color: orange;
+    border: orange 2px solid; 
+}
+.nav-link.subadmin{
+    background-color: orange;
+    border: orange 2px solid; 
+}
+.fa-solid.fa-heart {
+    color: red;
+}
+
+.signup-button a, .login-button a, .logout-button a {
+    padding: 5px 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.signup-button:hover {
+    background-color: rgba(220, 220, 220, 0.381);
+}
+
+.login-button:hover {
+    background-color: rgba(220, 220, 220, 0.381);
+}
+
+.logout-button:hover {
+    background-color: rgba(220, 220, 220, 0.381);
+}
+
+@media screen and (max-width: 700px){
+    .box{
+      width: 70%;
+    }
+    .popup{
+      width: 70%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1024px){
+    .nav-item .nav-link {
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1308px){
+    .nav-item .nav-link {
+        font-size: 0.8rem;
+    }
+}
+
+.navbar-nav a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* .navbar-nav a:hover {
+    color: goldenrod;
+} */

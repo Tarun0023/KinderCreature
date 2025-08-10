@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.footer-section {
+    background-color: #737373;
+}
+
+.footer-container {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1300px;
+    width: 100%;
+}
+
+.footer {
+    color: white;
+    padding: 20px;
+}
+
+.footer-logo {
+    text-align: end;
+    margin-bottom: 30px;
+    border-bottom: 3px rgb(255, 196, 0) solid;
+}
+
+.footer-logo .ft-logo {
+    font-family: 'Brasika Display - Trial', sans-serif;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+}
+
+.ft-logo > span {
+    color: rgb(255, 196, 0);
+}
+
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.ft-col {
+    min-width: 200px; /* Minimum column width */
+}
+
+.ft-col ul {
+    list-style: none; /* Removes bullets */
+    padding: 0;       /* Removes left padding */
+    margin: 0;        /* Removes default margin */
+}
+
+.ft-heading {
+    color: #fff;
+    font-family: CeraGIBold, sans-serif;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    opacity: 0.8;
+    font-weight: 600;
+}
+
+.ft-list {
+    margin: 10px 0;
+}
+
+.ft-list > * {
+    color: black;
+}
+
+.ft-list a {
+    font-family: CeraGIRegular, sans-serif;
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: #000;
+}
+
+.ft-list a:hover {
+    color: rgb(255, 196, 0);
+}
+
+.fa-solid {
+    /* margin-right: 10px; */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer-row {
+        flex-direction: column; /* Stack all columns */
+        align-items: center;
+    }
+
+    .ft-col {
+        flex: 1 1 100%; /* Full width for all columns */
+        text-align: center;
+    }
+
+    .ft-heading {
+        font-size: 1.25rem;
+    }
+
+    .footer-logo .ft-logo {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 10px;
+    }
+
+    .ft-heading {
+        font-size: 1rem;
+    }
+
+    .ft-list a {
+        font-size: 0.9rem;
+    }
+
+    .fa-solid {
+        margin-right: 5px;
+    }
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Individual Icons */
+.icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(255, 255, 255); /* Orange color */
+    color: rgb(255, 196, 0) !important;
+    border-radius: 50%; /* Rounded edges */
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover Effect */
+.icon:hover {
+    border-radius: 10px;
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb(255, 196, 0); /* Slightly darker orange */
+    transform: translateY(-5px); /* Slight lift */
+}
+
+/* Responsive Behavior */
+@media (max-width: 500px) {
+  .icon {
+    width: 40px;
+    height: 40px;
+    font-size: 5rem; /* Smaller icons */
+  }
+}

@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1400px;
+}
+
+/* .sterilized-animal {
+    background-image: url(../img/sterilize-vaccinate-animals.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 680px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    top: 50px;
+} */
+
+.sterilized-animal {
+    background-image: url(../sterilization/sterilization_img/sterilize-vaccinate-animals.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 590px;
+    display: flex;
+    align-items: center;
+}
+
+.sterilize-top {
+    max-width: 700px;
+    font-family: 'Brasika Display - Trial', sans-serif;
+    font-weight: 600;
+    min-height: 100%;
+    text-wrap: wrap;
+}
+
+.s-bg-title {
+    font-size: 3rem;
+    text-wrap: wrap;
+}
+
+.sterilize-top>img {
+    width: 30%;
+    margin: 25px 0;
+}
+
+.s-content-section {
+    margin: 40px 0;
+}
+
+.sterilize-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.s-col {
+    width: 50%;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+    .sterilize-content {
+      flex-direction: column;
+    }
+
+    .s-col {
+        width: 100%;
+    }
+  }
+
+.s-title {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+    font-size: 1.9rem;
+}
+
+.s-description {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.s-description.two {
+    font-size: 1.1rem;
+}
+
+.s-get-in-touch {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.get-in-touch {
+    text-decoration: none;
+    color: #fff;
+    background-color: #000;
+    padding: 10px 20px;
+    border-radius: none;
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-top: 100px;
+}
+
+
+@media (max-width: 768px) and (min-width: 200px) {
+    .container {
+        width: 100%;
+    }
+}

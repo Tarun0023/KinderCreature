@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Alef:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alef:wght@400;700&family=Merienda:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.detailed_aic-body {
+    background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* General Styling */
+.aic-details {
+    font-family: "Balsamiq Sans", serif;
+    /* background: linear-gradient(135deg, #fdfbfb, #f5f5f5); */
+    background-color: honeydew;
+    padding: 40px 80px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 50px 10px #bbbbbb27;
+    max-width: 1200px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+/* Title */
+.aic-title {
+    font-size: 42px;
+    /* font-family: "Merienda", serif; */
+    color: #8a6d3b;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    display: inline-block;
+    padding-bottom: 10px;
+    text-align:center;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(0.25turn, rgb(255, 255, 255), rgb(3, 98, 58), rgb(255, 255, 255));
+    border-image-slice: 1;
+}
+
+/* Content Wrapper */
+.aic-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+/* Left Image */
+.aic-image img {
+    width: 100%;
+    max-width: 400px;
+    /* border-radius: 5px; */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    /* border: 2px solid burlywood; */
+    transition: transform 0.3s;
+}
+
+.aic-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Right Details */
+.aic-details-content {
+    text-align: left;
+    font-size: 18px;
+    color: #555;
+}
+
+.aic-details-content ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.aic-details-content li {
+    margin-bottom: 15px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.aic-details-content strong {
+    margin-right: 10px;
+    color: rgb(239, 190, 85);
+}
+
+/* Description */
+.aic-description {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+    margin-top: 20px;
+}
+
+.aic-description p {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Donate Button */
+.donate-button {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: rgb(222, 161, 19);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0px 15px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+    text-align: right;
+}
+
+.donate-button:hover {
+    background: #ae8030;
+    transform: translateY(-3px);
+}
+
+.aic-detail {
+    flex: 1;
+    font-size: 18px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .aic-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .aic-image img {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .aic-details-content {
+        text-align: center;
+    }
+
+    .aic-details-content ul {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .aic-title {
+        font-size: 32px;
+    }
+
+    .aic-content {
+        gap: 10px;
+    }
+
+    .aic-details-content li {
+        font-size: 16px;
+    }
+
+    .donate-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .aic-details {
+        padding: 20px 10px;
+    }
+
+    .aic-title {
+        font-size: 28px;
+    }
+
+    .aic-content {
+        gap: 15px;
+    }
+
+    .aic-image img {
+        max-width: 100%;
+    }
+
+    .aic-details-content li {
+        font-size: 14px;
+    }
+
+    .aic-description p {
+        font-size: 16px;
+    }
+
+    .donate-button {
+        padding: 8px 18px;
+        font-size: 14px;
+    }
+}

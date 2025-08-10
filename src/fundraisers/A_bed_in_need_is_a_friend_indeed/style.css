@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    text-align: left; /* Ensure all body text is left-aligned */
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px; /* Add padding for better spacing on smaller screens */
+}
+
+.donation-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 100px 0;
+    background-color: #ffffff;
+}
+
+.donation-content {
+    flex: 1;
+    padding-right: 20px;
+    text-align: left; /* Left-align donation content */
+}
+
+.donation-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.donation-content p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.donate-btn {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.donate-btn:hover {
+    background-color: #444;
+}
+
+.donation-image {
+    flex: 1;
+}
+
+.donation-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.campaign-card img{
+    border: 1px solid #000;
+}
+@media screen and (max-width: 768px) {
+    .donation-section {
+        flex-direction: column; /* Stack elements vertically on small screens */
+        text-align: left;
+    }
+
+    .donation-content {
+        padding-right: 0; /* Remove right padding */
+        margin-bottom: 20px; /* Add space between elements */
+    }
+}
+
+/* Campaign Section */
+.campaign-section {
+    text-align: center;
+    background-color: #fff6db;
+    padding: 40px 0;
+}
+
+.campaign-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: left; /* Left-align campaign section heading */
+}
+
+.campaign-slider {
+    position: relative;
+    max-width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.campaign-cards {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    text-align: left; /* Left-align campaign cards */
+}
+
+.campaign-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    text-align: left; /* Left-align campaign card content */
+    flex-shrink: 0;
+}
+
+.campaign-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.campaign-card h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.campaign-card p {
+    margin: 10px 0;
+}
+
+.learn-btn, .donate-btn {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.learn-btn:hover, .donate-btn:hover {
+    background-color: #444;
+}
+
+/* Slider Buttons */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+.campaign-cards {
+    display: flex;
+    overflow-x: hidden; /* Enables horizontal scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+    .donation-section {
+        flex-direction: column; /* Stack elements vertically on small screens */
+        text-align: left;
+    }
+
+    .donation-content {
+        padding-right: 0; /* Remove right padding */
+        margin-bottom: 20px; /* Add space between elements */
+    }
+
+    body {
+        font-size: 1.2rem;
+    }
+
+    .donation-content h2,
+    .campaign-section h2 {
+        font-size: 2.5rem;
+    }
+
+    .donation-content p,
+    .campaign-card p {
+        font-size: 1.2rem;
+    }
+
+    .campaign-card h3 {
+        font-size: 1.8rem;
+    }
+}

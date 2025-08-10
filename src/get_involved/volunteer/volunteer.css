@@ -1,0 +1,234 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+.main{
+    padding: 0rem 10rem;
+}
+
+.container {
+    width: 100%;
+}
+
+.top {
+    position: relative;
+    background-image: url(Hero.jpg);
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+}
+
+
+.top-container {
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    max-width: 1140px;
+    min-height: 400px;
+    align-items: center;
+}
+
+h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+.under-care-title {
+    color: #f4f2ef;
+    font-size: 60px;
+    font-weight: 700;
+}
+
+/* Perks Section */
+.perks {
+    margin: 40px 0;
+}
+
+.perks-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.perks-img {
+    border-radius: 10px;
+    width: 35%;
+    height: auto;
+}
+
+.perks-text {
+    flex: 1 1 50%;
+    text-align: left;
+}
+
+/* Duties Section */
+.duties {
+    margin: 40px 0;
+}
+
+.duties-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.duties-text {
+    flex: 1 1 50%;
+}
+.duties-text span{
+    color: rgb(255, 0, 0);
+}
+
+.duties-img {
+    flex: 1 1 40%;
+    max-width: 500px;
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+}
+
+ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .perks-content, .duties-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .perks-text, .duties-text {
+        text-align: center;
+    }
+}
+
+/* General Styles */
+.volunteer-body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container {
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Form Styles */
+form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    background: #fdfdfd;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #0056b3;
+}
+
+button.submit-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background: #ffb300;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button.submit-btn:hover {
+    background: #ffd52b;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .form-container {
+        padding: 15px 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    input, select {
+        font-size: 14px;
+    }
+
+    button.submit-btn {
+        font-size: 14px;
+    }
+}
+@media (max-width: 768px) {
+    .top-container {
+        min-height: 250px;
+    }
+
+    .under-care-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    input, select {
+        font-size: 14px;
+    }
+
+    button.submit-btn {
+        font-size: 14px;
+    }
+}
