@@ -1,6 +1,6 @@
 <?php
-include_once 'C:\xampp\htdocs\KinderCreature\src\layout\header.php';  // Include the header (if needed)
-include_once 'C:\xampp\htdocs\KinderCreature\src\database.php';  // Include the database connection
+include_once $_SERVER['DOCUMENT_ROOT'] . '/src/layout/header.php';  // Include the header (if needed)
+include_once $_SERVER['DOCUMENT_ROOT'] . '/src/database.php';  // Include the database connection
 
 ?>
 
@@ -13,7 +13,7 @@ include_once 'C:\xampp\htdocs\KinderCreature\src\database.php';  // Include the 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="/src/shop/shop.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
@@ -68,12 +68,12 @@ include_once 'C:\xampp\htdocs\KinderCreature\src\database.php';  // Include the 
                         ?>
                             <!-- Product Card -->
                             <div class="product-card" id="product-<?php echo $productId; ?>" name="pd_id">
-                                <a href="/KinderCreature/src/shop/detailed_product/detailed_product.php?id=<?php echo $productId; ?>" class="product-tumb">
+                                <a href="/src/shop/detailed_product/detailed_product.php?id=<?php echo $productId; ?>" class="product-tumb">
                                     <img src="<?php echo $productImage; ?>" alt="<?php echo $productName; ?>">
                                 </a>
                                 <div class="product-details">
-                                    <h4><a href="/KinderCreature/src/shop/detailed_product/detailed_product.php?id=<?php echo $productId; ?>"><?php echo $productName; ?></a></h4>
-                                    <a href="/KinderCreature/src/shop/detailed_product/detailed_product.php?id=<?php echo $productId; ?>" class="product-description"><?php echo $productDescription; ?></a>
+                                    <h4><a href="/src/shop/detailed_product/detailed_product.php?id=<?php echo $productId; ?>"><?php echo $productName; ?></a></h4>
+                                    <a href="/src/shop/detailed_product/detailed_product.php?id=<?php echo $productId; ?>" class="product-description"><?php echo $productDescription; ?></a>
                                     <hr>
                                     <div class="product-bottom-details">
                                         <span class="product-price">MRP : ₹ <span class="product-prize-actual"><?php echo $productPrice; ?></span></span>
@@ -103,7 +103,7 @@ include_once 'C:\xampp\htdocs\KinderCreature\src\database.php';  // Include the 
     ?>
 
     <!-- Floating Add to Cart Button -->
-    <a href="/KinderCreature/src/shop/cart/cart.php" class="floating-cart-button">
+    <a href="/src/shop/cart/cart.php" class="floating-cart-button">
         <i class="fas fa-shopping-cart"></i>
         <span class="cart-text">Cart</span>
         <span class="cart-count" id="cart-count">0</span>
@@ -168,4 +168,4 @@ include_once 'C:\xampp\htdocs\KinderCreature\src\database.php';  // Include the 
     </script>
 </body>
 </html>
-<?php include('C:\xampp\htdocs\KinderCreature\src\layout\footer.php'); ?>
+<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/src/layout/footer.php'; ?>

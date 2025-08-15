@@ -1,6 +1,6 @@
 <?php
 // Include the database connection file
-include('C:\xampp\htdocs\KinderCreature\src\database.php');
+include $_SERVER['DOCUMENT_ROOT'] . '/src/database.php';
 
 // Handle adding a new blog
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add-blog'])) {

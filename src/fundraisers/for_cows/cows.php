@@ -1,11 +1,11 @@
-<?php include('C:\xampp\htdocs\KinderCreature\src\layout\header.php'); ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/src/layout\header.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Care for our Cows</title>
-    <link rel="icon" type="image/x-icon" href="/KinderCreature/img/web_logo.png">
+    <link rel="icon" type="image/x-icon" href="/img/web_logo.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -71,4 +71,4 @@
     <script src="script.js"></script>
 </body>
 </html>
-<?php include('C:\xampp\htdocs\KinderCreature\src\layout\footer.php'); ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/src/layout\footer.php'; ?>

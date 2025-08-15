@@ -1,5 +1,5 @@
 <?php
-include 'C:\xampp\htdocs\KinderCreature\src\layout\header.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/src/layout/header.php';
 ?> 
 
 <!DOCTYPE html>
@@ -10,9 +10,9 @@ include 'C:\xampp\htdocs\KinderCreature\src\layout\header.php';
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/KinderCreature/src/work/what_we_do/sterilization/sterilization.css">
+    <link rel="stylesheet" href="/src/work/what_we_do/sterilization/sterilization.css">
     <title>sterilization</title>
-    <link rel="icon" type="image/x-icon" href="/KinderCreature/img/web_logo.png">
+    <link rel="icon" type="image/x-icon" href="/img/web_logo.png">
 </head>
 <body>
     <main class="sterilization">
@@ -21,7 +21,7 @@ include 'C:\xampp\htdocs\KinderCreature\src\layout\header.php';
                 <div class="sterilize-container">
                     <div class="sterilize-top">
                         <p class="s-bg-title">We have sterilised and <br> vaccinated 9,200+ animals till date.</p>
-                        <img src="../img/curve-line.png" alt="">
+                        <img src="/img/curve-line.png" alt="">
                     </div>
                     
                 </div>
@@ -59,4 +59,4 @@ include 'C:\xampp\htdocs\KinderCreature\src\layout\header.php';
 </body>
 </html>
 
-<?php include('C:\xampp\htdocs\KinderCreature\src\layout\footer.php'); ?>
+<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/src/layout/footer.php'; ?>

@@ -3,7 +3,7 @@
 ?>
 
 <?php
-include('C:\xampp\htdocs\KinderCreature\src\database.php');
+include $_SERVER['DOCUMENT_ROOT'] . '/src/database.php';
 $message = "";  // Initialize the message variable to prevent undefined variable error.
 $message_success = "";  // Initialize success message variable.
 
@@ -25,8 +25,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $to = $email_reg;
         $subject = 'Password Reset Request - Kinder Creature';
         
-        // HTML Email Content
-        $msg = '
+    // Build a production-safe base URL (prefer HTTPS on the live site)
+    $base_url = 'https://' . $_SERVER['HTTP_HOST'];
+    $reset_link = $base_url . '/src/login_signup/forgot/reset_password.php?key=' . urlencode($key) . '&email=' . urlencode($email_reg);
+
+    // HTML Email Content
+    $msg = '
         <!DOCTYPE html>
         <html lang="en">
         <head>
@@ -87,7 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     <p>
                         Please click the button below or copy the link into your browser to reset your password.
                     </p>
-                    <a href="http://localhost/KinderCreature/src/login_signup/forgot/reset_password.php?key=' . $key . '&email=' . $email_reg . '" class="button" style="color:white;">
+                    <a href="' . $reset_link . '" class="button" style="color:white;">
                         Reset Password
                     </a>
                     <p>
@@ -100,8 +104,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         ';
         
         // Email Headers
-        $headers = "From: Kinder Creatures <noreply@kindercreatures.com>\r\n";
-        $headers .= "Reply-To: noreply@kindercreatures.com\r\n";
+    // Use a sender address that matches the production domain
+    $headers = "From: Kinder Creature <noreply@kindercreature.me>\r\n";
+    $headers .= "Reply-To: noreply@kindercreature.me\r\n";
         $headers .= "MIME-Version: 1.0\r\n";
         $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
@@ -122,13 +127,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forgot Password</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="/KinderCreature/img/web_logo.png">
-    <link href="/KinderCreature/src/login_signup/forgot/styleforgot.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/img/web_logo.png">
+    <link href="/src/login_signup/forgot/styleforgot.css" rel="stylesheet">
 </head>
 <body class="forgot-body">
     <div>
         <div class="logo text-center">
-            <img class="nav-logo" src="/KinderCreature/img/web_logo.png" alt="logo">
+            <img class="nav-logo" src="/img/web_logo.png" alt="logo">
         </div>
         <h1><span style="color:black;">Kinder</span><span style="color:blue;">Creature</span></h1>
     </div>
@@ -158,7 +163,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         </form>
         <div class="row">
             <ul class="page-links">
-                <p>Remember your password? <a href="/KinderCreature/src/login_signup/login/login.php">Login</a></p>
+                <p>Remember your password? <a href="/src/login_signup/login/login.php">Login</a></p>
             </ul>
         </div>
     </div>

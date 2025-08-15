@@ -1,6 +1,6 @@
 <?php
-include 'C:\xampp\htdocs\KinderCreature\src\layout\header.php';
-include 'C:\xampp\htdocs\KinderCreature\src\database.php'; // Include database connection
+include_once $_SERVER['DOCUMENT_ROOT'] . '/src/layout/header.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/src/database.php'; // Include database connection
 
 // Fetch product details based on ID
 if (isset($_GET['id'])) {
@@ -15,12 +15,12 @@ if (isset($_GET['id'])) {
     if ($result->num_rows > 0) {
         $product = $result->fetch_assoc();
     } else {
-        echo "<script>alert('Product not found!'); window.location.href = '/KinderCreature/src/shop/shop.php';</script>";
+        echo "<script>alert('Product not found!'); window.location.href = '/src/shop/shop.php';</script>";
         exit();
     }
     $stmt->close();
 } else {
-    echo "<script>alert('Invalid Product ID!'); window.location.href = '/KinderCreature/src/shop/shop.php';</script>";
+    echo "<script>alert('Invalid Product ID!'); window.location.href = '/src/shop/shop.php';</script>";
     exit();
 }
 ?>
@@ -43,7 +43,7 @@ if (isset($_GET['id'])) {
     <div class="card">
       <div class="card__title">
         <div>
-          <a class="icon-d-p" href="/KinderCreature/src/shop/shop.php">
+          <a class="icon-d-p" href="/src/shop/shop.php">
             <span class="back-icon"><i class="fa fa-arrow-left d-p"></i></span>
             <span class="back-text">Back</span>
           </a>
@@ -89,7 +89,7 @@ if (isset($_GET['id'])) {
 
         
         <!-- Floating Add to Cart Button -->
-        <a href="/KinderCreature/src/shop/cart/cart.php" class="floating-cart-button">
+        <a href="/src/shop/cart/cart.php" class="floating-cart-button">
             <i class="fas fa-shopping-cart"></i>
             <span class="cart-text">Cart</span>
             <span class="cart-count" id="cart-count">0</span>
@@ -130,4 +130,4 @@ if (isset($_GET['id'])) {
       </body>
 </html>
 
-<?php include('C:\xampp\htdocs\KinderCreature\src\layout\footer.php'); ?>
+<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/src/layout/footer.php'; ?>

@@ -1,6 +1,6 @@
 <?php
-include 'C:\xampp\htdocs\KinderCreature\src\layout\header.php';
-include 'C:\xampp\htdocs\KinderCreature\src\database.php'; // Ensure this connects to your database
+include_once $_SERVER['DOCUMENT_ROOT'] . '/src/layout/header.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/src/database.php'; // Ensure this connects to your database
 
 // Check if 'blog_id' is provided in the URL
 if (isset($_GET['blog_id']) && is_numeric($_GET['blog_id'])) {
@@ -30,7 +30,7 @@ if (isset($_GET['blog_id']) && is_numeric($_GET['blog_id'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="detailed_blog.css">
+    <link rel="stylesheet" href="/src/who_we_are/blog/detailed_blog/detailed_blog.css">
     <title><?php echo htmlspecialchars($blog['blog_title']); ?></title>
 </head>
 <body class="detailed_blog body">
@@ -58,4 +58,4 @@ if (isset($_GET['blog_id']) && is_numeric($_GET['blog_id'])) {
 </body>
 </html>
 
-<?php include('C:\xampp\htdocs\KinderCreature\src\layout\footer.php'); ?>
+<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/src/layout/footer.php'; ?>

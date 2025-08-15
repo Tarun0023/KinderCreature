@@ -6,17 +6,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (strlen($_POST["password"]) < 8) {
         $_SESSION['error'] = "❌ Password must be at least 8 characters.";
         echo "Error set in session, redirecting..."; // Debugging line
-        header("Location: /KinderCreature/src/login_signup/signup/signup.php");
+        header("Location: /src/login_signup/signup/signup.php");
         exit;
     }
     if (trim($_POST["password"]) !== trim($_POST["retype_password"])) {
         $_SESSION['error'] = "❌ Passwords do not match.";
-        header("Location: /KinderCreature/src/login_signup/signup/signup.php");
+        header("Location: /src/login_signup/signup/signup.php");
         exit;
     }    
 
     // Database connection
-    $mysqli = require('C:\xampp\htdocs\KinderCreature\src\database.php');
+    $mysqli = require_once $_SERVER['DOCUMENT_ROOT'] . '/src/database.php';
 
     // Check if the email already exists
     $email = $_POST["email"];
@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($stmt->num_rows > 0) {
         $_SESSION['error'] = "❌ User already exists.";
-        header("Location: /KinderCreature/src/login_signup/signup/signup.php");
+        header("Location: /src/login_signup/signup/signup.php");
         exit;
     }
 
@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (!$stmt) {
         $_SESSION['error'] = "❌ SQL error: " . $mysqli->error;
-        header("Location: /KinderCreature/src/login_signup/signup/signup.php");
+        header("Location: /src/login_signup/signup/signup.php");
         exit;
     }
 
@@ -50,11 +50,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($stmt->execute()) {
         // Set success message and redirect to login page
         $_SESSION['success'] = "✔️ Account created successfully! You can now log in.";
-        header("Location: /KinderCreature/src/login_signup/signup/signup.php");
+        header("Location: /src/login_signup/signup/signup.php");
         exit;
     } else {
         $_SESSION['error'] = "❌ Failed to create user. Please try again later.";
-        header("Location: /KinderCreature/src/login_signup/signup/signup.php");
+        header("Location: /src/login_signup/signup/signup.php");
         exit;
     }
 }

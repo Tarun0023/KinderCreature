@@ -1,6 +1,6 @@
 <?php
-include 'C:\xampp\htdocs\KinderCreature\src\layout\header.php';
-require 'C:\xampp\htdocs\KinderCreature\src\database.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/src/layout/header.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/src/database.php';
 
 // Fetch the animal ID from the URL
 $animal_id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
@@ -69,7 +69,7 @@ if ($result && $animal = mysqli_fetch_assoc($result)) {
         <!-- Description Section -->
         <section class="theme-description">
             <p><?php echo $description; ?></p>
-            <a href="\KinderCreature\src\get_involved\donate\donate.php" class="donate-btn">Help <?php echo $name; ?></a>
+            <a href="/src/get_involved/donate/donate.php" class="donate-btn">Help <?php echo $name; ?></a>
         </section>
 
         <!-- Shelter Info Section -->
@@ -100,4 +100,4 @@ if ($result && $animal = mysqli_fetch_assoc($result)) {
     </main>
 </body>
 </html>
-<?php include('C:\xampp\htdocs\KinderCreature\src\layout\footer.php'); ?>
+<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/src/layout/footer.php'; ?>

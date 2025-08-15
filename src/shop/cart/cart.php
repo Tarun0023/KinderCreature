@@ -1,18 +1,18 @@
-<?php include_once 'C:\xampp\htdocs\KinderCreature\src\layout\header.php'; ?>
-<?php include_once 'C:\xampp\htdocs\kindercreature\src\database.php'; ?>
+<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/src/layout/header.php'; ?>
+<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/src/database.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="/src/shop/cart/cart.css">
     <title>Shopping Cart</title>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <a href="/KinderCreature/src/shop/shop.php" class="back-btn">
+            <a href="/src/shop/shop.php" class="back-btn">
                 <i class="fa-sharp fa-solid fa-arrow-left-long"></i> BACK
             </a>
             <h1>Shopping Cart</h1>
@@ -38,7 +38,7 @@
                 <span>TOTAL PRICE</span>
                 <span id="total-price">₹ 0</span>
             </div>
-            <a class="checkout-btn" href="\KinderCreature\src\shop\checkout\checkout.php">CHECKOUT</a>
+            <a class="checkout-btn" href="/src/shop/checkout/checkout.php">CHECKOUT</a>
         </div>
     </div>
 
@@ -57,7 +57,7 @@
                 cartContainer.innerHTML = `
                     <div class="empty-cart">
                         <p>Your cart is empty.</p>
-                        <a href="/KinderCreature/src/shop/shop.php" class="continue-shopping">Continue Shopping</a>
+                        <a href="/src/shop/shop.php" class="continue-shopping">Continue Shopping</a>
                     </div>
                 `;
                 // Hide the summary section
@@ -80,7 +80,7 @@
                 cartItem.className = 'cart-item';
                 cartItem.innerHTML = `
                     <img src="${item.image}" alt="${item.name}">
-                    <div class="item-details" onclick="window.location.href='/KinderCreature/src/shop/detailed_product/detailed_product.php?id=${item.id}'">
+                    <div class="item-details" onclick="window.location.href='/src/shop/detailed_product/detailed_product.php?id=${item.id}'">
                         <div class="item-name">${item.name}</div>
                         <div class="item-description">${item.description}</div>
                     </div>
@@ -128,4 +128,4 @@
 </body>
 </html>
 
-<?php include_once 'C:\xampp\htdocs\KinderCreature\src\layout\footer.php'; ?>
+<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/src/layout\footer.php'; ?>

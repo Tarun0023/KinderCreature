@@ -1,5 +1,5 @@
 <?php
-include 'C:\xampp\htdocs\KinderCreature\src\layout\header.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/src/layout/header.php';
 ?>
 
 <!DOCTYPE html>
@@ -8,9 +8,9 @@ include 'C:\xampp\htdocs\KinderCreature\src\layout\header.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="icon" type="image/x-icon" href="/KinderCreature/img/web_logo.png">
+    <link rel="icon" type="image/x-icon" href="/img/web_logo.png">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
-    <link href="/KinderCreature/src/login_signup/signup/stylesignup.css" rel="stylesheet">
+    <link href="/src/login_signup/signup/stylesignup.css" rel="stylesheet">
     <script>
         // Clear input fields on page load
         document.addEventListener("DOMContentLoaded", function() {
@@ -22,12 +22,12 @@ include 'C:\xampp\htdocs\KinderCreature\src\layout\header.php';
 <body class="signup-body">
     <div>
         <div class="logo text-center">
-           <img class="nav-logo" src="/KinderCreature/img/web_logo.png" alt="logo">
+           <img class="nav-logo" src="/img/web_logo.png" alt="logo">
         </div>
         <h1><span style="color:black;">Kinder</span><span style="color:blue;">Creature</span></h1>
     </div>
     <div class="container">
-        <form action="/KinderCreature/src/login_signup/signup/process_signup.php" method="post" autocomplete="off">
+    <form action="/src/login_signup/signup/process_signup.php" method="post" autocomplete="off">
             <div class="loginpage">
                 <input class="user-input" type="text" placeholder="Username" name="username" required>
                 <input class="email-input" type="email" placeholder="E-mail" name="email" required>
@@ -50,7 +50,7 @@ include 'C:\xampp\htdocs\KinderCreature\src\layout\header.php';
         <div class="row">
             <ul class="page-links">
                 <span>Already have an account? </span>
-                <a href="/KinderCreature/src/login_signup/login/login.php">Login</a>
+                <a href="/src/login_signup/login/login.php">Login</a>
             </ul>
         </div>
     </div>

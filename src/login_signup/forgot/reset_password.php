@@ -5,7 +5,7 @@
 <?php 
 $message = "";
 $valid = 'true';
-include('C:\xampp\htdocs\KinderCreature\src\database.php');
+include $_SERVER['DOCUMENT_ROOT'] . '/src/database.php';
 
 if (isset($_GET['key']) && isset($_GET['email'])) {
     $key = mysqli_real_escape_string($mysqli, $_GET['key']);
@@ -18,7 +18,7 @@ if (isset($_GET['key']) && isset($_GET['email'])) {
         exit;
     }
 } else {
-    header('Location: /KinderCreature/src/login_signup/forgot/reset_password.php');
+    header('Location: /src/login_signup/forgot/reset_password.php');
     exit;
 }
 
@@ -50,13 +50,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reset Password</title>
-    <link rel="icon" type="image/x-icon" href="/KinderCreature/img/web_logo.png">
-    <link href="/KinderCreature/src/login_signup/forgot/reset_password.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/img/web_logo.png">
+    <link href="/src/login_signup/forgot/reset_password.css" rel="stylesheet">
 </head>
 <body class="forgot-body">
     <div>
         <div class="logo text-center">
-            <img class="nav-logo" src="/KinderCreature/img/web_logo.png" alt="logo">
+            <img class="nav-logo" src="/img/web_logo.png" alt="logo">
         </div>
         <h1><span style="color:black;">Kinder</span><span style="color:blue;">Creature</span></h1>
     </div>
@@ -87,7 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="row">
             <ul class="page-links">
                 <p>This link will work only once for a limited time period.</p>
-                <p class="direct-redirection">Back to <a href="/KinderCreature/src/login_signup/login/login.php">Login</a></p>
+                <p class="direct-redirection">Back to <a href="/src/login_signup/login/login.php">Login</a></p>
             </ul>
         </div>
     </div>
