@@ -1,5 +1,5 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT'] . '/src/database.php';
+include('C:\xampp\htdocs\KinderCreature\src\database.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">

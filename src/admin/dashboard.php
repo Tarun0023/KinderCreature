@@ -1,6 +1,6 @@
 <?php
 // Include the database connection file
-include $_SERVER['DOCUMENT_ROOT'] . '/src/database.php';
+include('C:\xampp\htdocs\KinderCreature\src\database.php');
 
 // Fetch the total number of users from the database
 $total_users_query = "SELECT COUNT(*) AS total_users FROM users";

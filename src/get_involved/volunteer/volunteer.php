@@ -1,13 +1,9 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] . '/src/layout/header.php';
+include 'C:\xampp\htdocs\KinderCreature\src\layout\header.php';
 ?>
 
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/src/database.php';
-?>
-
-<?php
-require $_SERVER['DOCUMENT_ROOT'] . '/src/database.php';
+require 'C:\xampp\htdocs\KinderCreature\src\database.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Collect and sanitize form inputs
@@ -118,8 +114,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </section>
     </div>
 </body>
-
-    <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/src/layout/footer.php'; ?>
-    </html>
 
 </html>

@@ -1,6 +1,6 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] . '/src/layout/header.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/src/database.php';
+include 'C:\xampp\htdocs\KinderCreature\src\layout\header.php';
+require 'C:\xampp\htdocs\KinderCreature\src\database.php';
 
 
 // Pagination setup
@@ -81,7 +81,7 @@ $result = mysqli_query($mysqli, $query);
                                 </div>
                             </div>
                             <div class="animal-button">
-                                <a href="/src/get_involved/adoptions/detailed_adoption/detailed_adoption.php?id=<?php echo $row['aic_id']; ?>">Read More</a>
+                                <a href="/KinderCreature/src/get_involved/adoptions/detailed_adoption/detailed_adoption.php?id=<?php echo $row['aic_id']; ?>">Read More</a>
                             </div>
                         </div>
                         <?php
@@ -185,4 +185,4 @@ $result = mysqli_query($mysqli, $query);
 
 </body>
 </html>
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/src/layout/footer.php'; ?>
+<?php include('C:\xampp\htdocs\KinderCreature\src\layout\footer.php'); ?>

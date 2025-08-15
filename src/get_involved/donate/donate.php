@@ -1,6 +1,6 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] . '/src/layout/header.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/src/database.php'; // Database connection
+include 'C:\xampp\htdocs\KinderCreature\src\layout\header.php';
+require 'C:\xampp\htdocs\kindercreature\src\database.php'; // Database connection
 ?>
 
 <!DOCTYPE html>
@@ -179,4 +179,4 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/src/database.php'; // Database connec
 </body>
 </html>
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/src/layout/footer.php'; ?>
+<?php include('C:\xampp\htdocs\KinderCreature\src\layout\footer.php'); ?>

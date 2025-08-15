@@ -1,7 +1,7 @@
 <?php
 
-include $_SERVER['DOCUMENT_ROOT'] . '/src/layout/header.php';
-include $_SERVER['DOCUMENT_ROOT'] . '/src/database.php'; 
+include 'C:\xampp\htdocs\KinderCreature\src\layout\header.php';
+include 'C:\xampp\htdocs\KinderCreature\src\database.php'; 
 
 
 $limit = 6; 
@@ -27,7 +27,7 @@ $result = $mysqli->query($sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
-    <link rel="stylesheet" href="/src/who_we_are/blog/blog.css">
+    <link rel="stylesheet" href="/KinderCreature/src/who_we_are/blog/blog.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
 </head>
 
@@ -58,7 +58,7 @@ $result = $mysqli->query($sql);
                                     <div class="detial">' . htmlspecialchars(substr($blog['blog_description'], 0, 100)) . '...</div>
                                 </div>
                                 
-                                    <a class="button" href="/src/who_we_are/blog/detailed_blog/detailed_blog.php?blog_id=' . $blog['blog_id'] . '">Read more</a>
+                                    <a class="button" href="/KinderCreature/src/who_we_are/blog/detailed_blog/detailed_blog.php?blog_id=' . $blog['blog_id'] . '">Read more</a>
                                 
                             </div>';
                     }
@@ -99,4 +99,4 @@ $result = $mysqli->query($sql);
 
 </html>
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/src/layout/footer.php'; ?>
+<?php include('C:\xampp\htdocs\KinderCreature\src\layout\footer.php'); ?>

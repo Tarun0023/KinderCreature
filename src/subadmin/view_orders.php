@@ -1,5 +1,5 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] . '/src/database.php';  // Include the database connection
+include_once 'C:\xampp\htdocs\KinderCreature\src\database.php';  // Include the database connection
 
 // Fetch orders from the database
 $sql = "SELECT ckt_id, ckt_fname, ckt_lname, ckt_email, ckt_co_no, ckt_address, ckt_state, ckt_city, ckt_zipcode FROM checkout";

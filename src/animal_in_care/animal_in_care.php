@@ -1,6 +1,6 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT'] . '/src/layout\header.php';
-require $_SERVER['DOCUMENT_ROOT'] . '/src/database.php';
+include 'C:\xampp\htdocs\KinderCreature\src\layout\header.php';
+require 'C:\xampp\htdocs\KinderCreature\src\database.php';
 
 
 
@@ -67,7 +67,7 @@ $result = $mysqli->query($sql);
                                 </div>
                             </div>
                             <div class="animal-button">
-                                <a href="/src/animal_in_care/detailed_aic/detailed_aic.php?animal_id=<?php echo $animal['aic_id']; ?>">Read More</a>
+                                <a href="/kindercreature/src/animal_in_care/detailed_aic/detailed_aic.php?animal_id=<?php echo $animal['aic_id']; ?>">Read More</a>
                             </div>
 
                         </div>
@@ -168,4 +168,4 @@ $result = $mysqli->query($sql);
 
 </html>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/src/layout\footer.php'; ?>
+<?php include('C:\xampp\htdocs\KinderCreature\src\layout\footer.php'); ?>

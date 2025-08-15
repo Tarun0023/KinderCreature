@@ -1,6 +1,6 @@
 <?php
 // Include the database connection file
-include $_SERVER['DOCUMENT_ROOT'] . '/src/database.php';
+include('C:\xampp\htdocs\KinderCreature\src\database.php');
 
 // DELETE PRODUCT FUNCTION
 if (isset($_GET['delete_id'])) {

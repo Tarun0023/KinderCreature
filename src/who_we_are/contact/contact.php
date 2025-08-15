@@ -1,6 +1,6 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/src/database.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/src/layout/header.php';
+include('C:\xampp\htdocs\KinderCreature\src\database.php');
+include 'C:\xampp\htdocs\KinderCreature\src\layout\header.php';
 ?>
 
 
@@ -18,9 +18,9 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/src/layout/header.php';
     <link
         href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="/src/who_we_are/contact/contact.css">
+    <link rel="stylesheet" href="/KinderCreature/src/who_we_are/contact/contact.css">
     <title>Contact Us</title>
-    <link rel="icon" type="image/x-icon" href="/img/web_logo.png">
+    <link rel="icon" type="image/x-icon" href="/KinderCreature/img/web_logo.png">
 </head>
 
 <body>
@@ -106,4 +106,4 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/src/layout/header.php';
 </body>
 </html>
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/src/layout/footer.php'; ?>
+<?php include('C:\xampp\htdocs\KinderCreature\src\layout\footer.php'); ?>

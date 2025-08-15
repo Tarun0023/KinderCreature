@@ -1,9 +1,9 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] . '/src/layout/header.php';
+include 'C:\xampp\htdocs\KinderCreature\src\layout\header.php';
 ?>
 
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] . '/src/database.php';
+include('C:\xampp\htdocs\KinderCreature\src\database.php');
 
 // Process form submission
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $stmt->execute();
         }
     
-        echo "<script>alert('Checkout and order items saved successfully!'); window.location.href = '/src/shop/shop.php';</script>";
+        echo "<script>alert('Checkout and order items saved successfully!'); window.location.href = '/KinderCreature/src/shop/shop.php';</script>";
         // Optionally, redirect to a confirmation page or display a message
     } else {
         echo "Error: " . $stmt->error;
@@ -59,14 +59,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 ?>
 
-<script src="/src/shop/checkout/cities.js"></script>
 <!DOCTYPE html>
 <html lang="en">
-<button type="button" class="back-btn"><a href="/src/shop/cart/cart.php">Return to Cart</a></button>
 <head>
-    echo "<script>alert('Checkout and order items saved successfully!'); window.location.href = '/src/shop/shop.php';</script>";
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/src/layout/footer.php'; ?>
+    <title>Checkout - KinderCreature</title>
     <link rel="stylesheet" href="checkout.css">
     <script src="\KinderCreature\src\shop\checkout\cities.js"></script>
 </head>

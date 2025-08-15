@@ -1,6 +1,6 @@
 <?php 
-include $_SERVER['DOCUMENT_ROOT'] . '/src/layout\header.php'; 
-require $_SERVER['DOCUMENT_ROOT'] . '/src/database.php';
+include 'C:\xampp\htdocs\KinderCreature\src\layout\header.php'; 
+require 'C:\xampp\htdocs\KinderCreature\src\database.php';
 
 
 if (isset($_GET['animal_id']) && is_numeric($_GET['animal_id'])) {
@@ -77,4 +77,4 @@ if (isset($_GET['animal_id']) && is_numeric($_GET['animal_id'])) {
 </body>
 </html>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/src/layout\footer.php'; ?>
+<?php include('C:\xampp\htdocs\KinderCreature\src\layout\footer.php'); ?>

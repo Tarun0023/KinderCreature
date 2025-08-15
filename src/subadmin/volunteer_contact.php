@@ -1,5 +1,5 @@
 <?php
-require $_SERVER['DOCUMENT_ROOT'] . '/src/database.php';
+require 'C:\xampp\htdocs\KinderCreature\src\database.php';
 
 // Query to fetch volunteer contact details
 $query = "SELECT * FROM volunteer_contacts";

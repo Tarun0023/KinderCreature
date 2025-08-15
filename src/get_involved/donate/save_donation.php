@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/src/database.php'; // Database connection
+require 'C:\xampp\htdocs\kindercreature\src\database.php'; // Database connection
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $full_name = trim($_POST['name']);

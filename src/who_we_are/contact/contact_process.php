@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/src/database.php'; // Include the database connection
+include('C:\xampp\htdocs\KinderCreature\src\database.php'); // Include the database connection
 session_start(); // Start session to store flash messages
 
 $message = "";  

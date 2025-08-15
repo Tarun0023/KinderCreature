@@ -1,5 +1,5 @@
 <?php
-require $_SERVER['DOCUMENT_ROOT'] . '/src/database.php'; // Include database connection
+require 'C:\xampp\htdocs\KinderCreature\src\database.php'; // Include database connection
 
 // Fetch the animal for editing (if "edit" is set in the query string)
 if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['edit'])) {
