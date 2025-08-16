@@ -20,7 +20,7 @@ session_start();
             <div class="container-fluid">
                 <a href="\KinderCreature\src\home_page\home.php">
                     <img class="nav-logo" src="\KinderCreature\img\web_logo.png" alt="logo"></a>
-                <a class="navbar-brand" >Kinder<span class="navbar-brand-name"> Creature</span></a>
+                <a class="navbar-brand" href="\KinderCreature\src\home_page\home.php">Kinder<span class="navbar-brand-name"> Creature</span></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
